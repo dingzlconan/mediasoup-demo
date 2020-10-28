@@ -109,7 +109,7 @@ export default class PeerView extends React.Component
 							className={classnames('icon', 'stats')}
 							onClick={() => onStatsClick(peer.id)}
 						/>
-					</div> */}
+					</div> 
 
 					<div className={classnames('box', { visible: showInfo })}>
 						<If condition={audioProducerId || audioConsumerId}>
@@ -395,10 +395,13 @@ export default class PeerView extends React.Component
 								{this._printConsumerScore(videoConsumerId, videoScore)}
 							</If>
 						</If>
-					</div>
+					</div>	*/}
 
-					{/*  <div className={classnames('peer', { 'is-me': isMe })}>
-						<Choose>
+					<div className={classnames('peer', { '': isMe })}>
+						<span className='display-name'>
+							{peer.displayName}
+						</span>
+						{/*<Choose>
 							<When condition={isMe}>
 								<EditableInput
 									value={peer.displayName}
@@ -430,8 +433,8 @@ export default class PeerView extends React.Component
 							<span className='device-version'>
 								{peer.device.name} {peer.device.version || null}
 							</span>
-						</div>
-					</div> */}
+						</div>*/}
+					</div>
 				</div>
 
 				<video
